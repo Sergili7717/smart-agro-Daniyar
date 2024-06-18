@@ -1,0 +1,135 @@
+footer {
+  background-color: #263c28;
+  padding-top: 90px;
+  .container {
+    .footer {
+      display: flex;
+      padding-bottom: 130px;
+      gap: 271px;
+      @media (max-width: 900px) {
+        flex-wrap: wrap;
+        gap: 100px;
+      }
+      &-left {
+        max-width: 630px;
+        max-height: 200px;
+        @media (max-width: 400px) {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        &__img {
+          max-width: 200px;
+          max-height: 41px;
+          img {
+            width: 100%;
+          }
+        }
+        p {
+          padding-bottom: clamp(16px, 2.31vw, 34px);
+          font-family: "Century Gothic";
+          font-weight: normal;
+          font-size: clamp(12px, 1.08vw, 16px);
+          line-height: clamp(15px, 1.7vw, 25px);
+          border-bottom: 2px solid rgba(255, 255, 255, 0.212);
+        }
+        &__imgs {
+          display: flex;
+          gap: 30px;
+          padding-top: clamp(14px, 2.31vw, 34px);
+        }
+      }
+      &-right {
+        display: flex;
+        gap: clamp(20px, 6.8vw, 100px);
+        @media (max-width: 500px) {
+          justify-content: center;
+          text-align: center;
+          gap: 40px;
+          flex-wrap: wrap;
+        }
+        .links {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          p {
+            font-family: "Livvic";
+            font-weight: 600;
+            font-size: clamp(12px, 1.49vw, 22px);
+            padding-bottom: 10px;
+          }
+          a {
+            font-family: "Century Gothic";
+            font-weight: 400;
+            font-size: clamp(12px, 1.02vw, 15px);
+          }
+        }
+        .news {
+          max-width: 315px;
+          max-height: 187px;
+          span {
+            font-family: "Livvic";
+            font-weight: 600;
+            font-size: clamp(12px, 1.49vw, 22px);
+          }
+          p {
+            font-family: "Century Gothic";
+            line-height: clamp(15px, 1.7vw, 25px);
+            padding-bottom: clamp(16px, 2.31vw, 34px);
+            padding-top: clamp(15px, 2.04vw, 30px);
+          }
+          form {
+            padding: 5px 0px 5px 0px;
+            max-height: 55px;
+            max-width: 315px;
+            background-color: #334b35;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 5px;
+            padding-left: 20px;
+            border-radius: 50px;
+            margin-top: clamp(12px, 1.63vw, 24px);
+            input {
+              border-style: none;
+              background-color: transparent;
+              &:focus,
+              :active {
+                border-style: none;
+                border: none;
+                outline: none;
+              }
+            }
+            button {
+              background-color: #f7c35f;
+              color: #1a1a1a;
+              // @include button-style(, );
+              border-radius: 50%;
+              border-style: none;
+              width: 45px;
+              height: 45px;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  .sub-footer__bottom {
+      border-top: 2px solid rgba(255, 255, 255, 0.384);
+        .box-X {
+          display: flex;
+          gap: clamp(10px, 54.42vw, 800px);
+          padding: 50px 0px 50px 0px;
+          flex-wrap: wrap;
+          .p {
+            font-family: "Century Gothic";
+          }
+          .crate {
+            display: flex;
+            gap: 25px;
+          }
+        }
+    }
+}

@@ -1,0 +1,1213 @@
+@font-face {
+  font-family: "Johnstown";
+  src: url("../fonts/JohnstownDemo.woff");
+}
+@font-face {
+  font-family: "Century Gothic bold";
+  src: url("../fonts/centurygothic_bold.ttf");
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/centurygothic.ttf");
+}
+@font-face {
+  font-family: "Mistral";
+  src: url("../fonts/mistral.woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+body {
+  font-family: "Century Gothic";
+  color: #fff;
+}
+
+.container {
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+header {
+  background-color: #334b35;
+  height: clamp(80px, 7.48vw, 110px);
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  font-family: "Mistral";
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header nav {
+  display: flex;
+  gap: 50px;
+}
+@media (max-width: 1100px) {
+  .header nav {
+    display: none;
+  }
+}
+.header .burger {
+  display: none;
+  width: 30px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+@media (max-width: 1100px) {
+  .header .burger {
+    display: flex;
+  }
+}
+.header .burger span,
+.header .burger::before,
+.header .burger::after {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.header .burger::after,
+.header .burger::before {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.header .burger::after {
+  bottom: 0;
+}
+.header .burger::before {
+  top: 0;
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #f7c35f;
+  display: inline-block;
+  transition: 0.5s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.nav-link:hover {
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  background-image: url(/images/image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+}
+.hero__text {
+  max-width: 730px;
+  padding-top: clamp(40px, 12.24vw, 180px);
+  font-family: "livvic";
+  padding-bottom: clamp(20px, 6.8vw, 100px);
+}
+.hero__text h3 {
+  font-family: "Century Gothic";
+  font-weight: 700;
+  font-size: clamp(12px, 3.42vw, 25px);
+  line-height: clamp(10px, 2.04vw, 30px);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-height: 46px;
+  max-width: 215px;
+}
+.hero__text h3::after {
+  content: "";
+  background-image: url("/images/Vector.svg");
+  display: inline-block;
+  height: 11px;
+  width: clamp(114px, 29.44vw, 214.97px);
+}
+.hero__text h1 {
+  font-family: Livvic;
+  font-weight: 700;
+  font-size: clamp(20px, 9.58vw, 70px);
+  line-height: clamp(47px, 12.03vw, 87.85px);
+}
+.hero__text h1 span {
+  color: #f7c35f;
+  position: relative;
+  width: fit-content;
+}
+.hero__text h1 span::after {
+  content: "";
+  width: 11.8%;
+  display: inline-block;
+  aspect-ratio: 75/62;
+  background-image: url("/images/image5.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -25%;
+  right: -6px;
+}
+.hero__text p {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(10px, 2.73vw, 20px);
+  line-height: clamp(12px, 3.35vw, 24.52px);
+  margin-top: 10px;
+}
+.hero__text .button {
+  font-family: "Livvic";
+  font-weight: 500;
+  font-size: clamp(10px, 2.05vw, 15px);
+  line-height: 18.83px;
+  margin-top: 30px;
+}
+
+.button {
+  background-color: #f7c35f;
+  color: #1a1a1a;
+  border: none;
+  display: inline-block;
+  border-radius: 20px;
+  padding: clamp(10px, 1.7vw, 25px) clamp(15px, 1.7vw, 50%);
+}
+.button:hover {
+  cursor: pointer;
+}
+
+main {
+  background-color: #334b35;
+  position: relative;
+}
+
+.intro {
+  display: flex;
+  gap: clamp(20px, 5.44vw, 80px);
+  padding-top: clamp(40px, 6.8vw, 100px);
+  align-items: start;
+  justify-content: center;
+}
+@media (max-width: 790px) {
+  .intro {
+    flex-direction: column;
+  }
+}
+.intro-left {
+  max-width: clamp(270px, 38%, 564px);
+  width: 100%;
+  min-width: 270px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.intro-left::after {
+  content: "";
+  display: block;
+  width: 116%;
+  position: absolute;
+  aspect-ratio: 658/497;
+  background-color: #263c28;
+  top: min(-7.8vw, -120px);
+  right: 146px;
+  z-index: -1;
+}
+@media (max-width: 790px) {
+  .intro-left {
+    max-width: 100%;
+  }
+}
+.intro-left-img {
+  width: 100%;
+  position: relative;
+}
+.intro-left-img::before {
+  content: "";
+  width: 20px;
+  height: 258px;
+  display: inline-block;
+  background-color: #f7c35f;
+  position: absolute;
+  left: -20px;
+  bottom: 21px;
+  border-radius: 5px 0 0 5px;
+}
+.intro-left-img img {
+  width: 100%;
+}
+.intro-left-content {
+  padding: clamp(10px, 2.17vw, 32px) clamp(15px, 2.38vw, 35px);
+  background-color: #6d8c54;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  max-width: 428px;
+  width: 100%;
+  align-items: center;
+  margin-top: -82px;
+  z-index: 10;
+  position: relative;
+}
+.intro-left-content-text {
+  padding-left: clamp(10px, 2.17vw, 32px);
+  border-left: 1px solid rgba(255, 255, 255, 0.5019607843);
+}
+.intro-left-content-text .price {
+  font-family: "Mistral";
+  font-size: 40px;
+}
+.intro-left-content-text .price + p {
+  font-family: "Livvic";
+}
+.intro-right {
+  max-width: 884px;
+  width: 100%;
+  min-width: 590px;
+}
+@media (max-width: 790px) {
+  .intro-right {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1034px) {
+  .intro-right {
+    min-width: 270px;
+  }
+}
+.intro-right h2 {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(10px, 1.36vw, 20px);
+  line-height: clamp(15px, 2.04vw, 30px);
+  margin: 20px 0;
+}
+.intro-right h3 {
+  font-family: "Livvic";
+  font-weight: 700;
+  font-size: clamp(25px, 3.4vw, 50px);
+  line-height: clamp(31px, 4.26vw, 62.75px);
+  margin-top: clamp(10px, 1.36vw, 20px);
+}
+.intro-right h4 {
+  font-family: "Livvic";
+  font-weight: 500;
+  font-size: clamp(15px, 2.04vw, 30px);
+  line-height: clamp(18.5px, 2.56vw, 37.65px);
+  color: #f7c35f;
+  margin-top: clamp(25px, 3.4vw, 50px);
+}
+.intro-right p {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(9px, 1.22vw, 18px);
+  line-height: clamp(13.5px, 1.83vw, 27px);
+  margin-top: clamp(10px, 1.36vw, 20px);
+}
+.intro-right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: clamp(15px, 3.74vw, 55px);
+}
+.intro-right ul li {
+  font-family: "Livvic";
+  font-weight: 500;
+  font-size: clamp(10px, 1.36vw, 20px);
+  line-height: clamp(13.5px, 1.83vw, 27px);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.intro-right ul li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-image: url(/images/Vector923.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.list {
+  font-family: "Livvic";
+}
+.list h3 {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(10px, 1.36vw, 20px);
+  line-height: clamp(15px, 2.04vw, 30px);
+  text-align: center;
+}
+.list h1 {
+  font-weight: 700;
+  font-size: clamp(25px, 3.4vw, 50px);
+  line-height: clamp(31.35px, 4.26vw, 62.75px);
+  text-align: center;
+  margin-bottom: 100px;
+}
+.list__cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1450px;
+  gap: clamp(20px, 4.08vw, 60px);
+  margin-bottom: 188px;
+}
+@media (max-width: 1450px) {
+  .list__cards {
+    justify-content: center;
+  }
+}
+.list__card {
+  width: 183px;
+  height: 177px;
+  background-color: rgba(217, 217, 217, 0.1019607843);
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 1s;
+}
+.list__card:hover {
+  background-color: #f7c35f;
+  color: black;
+}
+.list__card .card-items {
+  width: 108px;
+  height: 105px;
+}
+.list__card img {
+  padding-bottom: 20px;
+}
+
+.watch {
+  background-image: url(/images/image7.png);
+  width: 100%;
+  height: calc(100vh - clamp(80px, 7.48vw, 110px));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.watch .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 694px;
+}
+@media (max-width: 700px) {
+  .watch .container {
+    flex-direction: column;
+  }
+  .watch .container h1 {
+    text-align: center;
+    padding-bottom: 70px;
+  }
+}
+.watch .container h1 {
+  font-family: Livvic;
+  margin-right: clamp(20px, 13.6vw, 200px);
+  font-weight: 700;
+  font-size: clamp(25px, 3.4vw, 50px);
+  line-height: clamp(31.25px, 4.26vw, 62.75px);
+}
+@media (max-width: 537px) {
+  .watch .container h1 {
+    text-align: center;
+    margin-right: 0px;
+  }
+}
+.watch .container .button-border {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.watch .container .button-border:hover button {
+  width: 130px;
+  height: 130px;
+}
+.watch .container .button-border button {
+  width: 80px;
+  transition: 1s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.watch .container p {
+  min-width: clamp(90px, 11.56vw, 170px);
+  height: 49px;
+  font-family: "Johnstown";
+  font-weight: 400;
+  font-size: clamp(15px, 2.04vw, 30px);
+  line-height: clamp(20px, 3.23vw, 47.59px);
+  color: #f7c35f;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+.work {
+  background-image: url(/images/style.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 130px;
+}
+.work .container h2 {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(10px, 1.36vw, 20px);
+  line-height: clamp(15px, 2.04vw, 30px);
+  text-align: center;
+}
+.work .container h1 {
+  font-family: "Livvic";
+  font-weight: 700;
+  font-size: clamp(25px, 3.4vw, 50px);
+  line-height: clamp(31px, 4.26vw, 62.75px);
+  text-align: center;
+}
+.work__cards {
+  display: flex;
+  gap: 57px;
+  max-width: 1400px;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  border-radius: 10px;
+}
+@media (max-width: 1500px) {
+  .work__cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.work__card {
+  max-width: 564px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: 1s;
+}
+.work__card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0px 5px 25px 0px rgba(247, 195, 95, 0.1);
+  border: 1px solid rgb(247, 195, 95);
+}
+.work__card-text {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 1;
+  bottom: -90px;
+  left: 0px;
+  padding: 20px;
+  transition: 1s;
+  background-color: rgba(26, 26, 26, 0.1725490196);
+}
+.work__card-text p {
+  font-family: Livvic;
+  font-weight: 600;
+  font-size: clamp(14px, 1.22vw, 18px);
+  line-height: clamp(11px, 1.53vw, 22.59px);
+}
+.work__card-text p span {
+  font-family: "Century Gothic";
+  font-weight: 700;
+  font-size: clamp(14px, 0.81vw, 12px);
+  line-height: clamp(10px, 1vw, 14.71px);
+}
+.work__card:hover .work__card-text {
+  bottom: 0px;
+}
+.work__card-img {
+  max-width: 318px;
+}
+.work__card-img img:first-child {
+  width: 100%;
+}
+.work p span {
+  color: #f7c35f;
+}
+
+.testimon {
+  padding-bottom: 200px;
+}
+.testimon .container h2 {
+  padding-top: 100px;
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(10px, 1.36vw, 20px);
+  line-height: clamp(15px, 2.04vw, 30px);
+  text-align: center;
+}
+.testimon .container h1 {
+  font-family: Livvic;
+  font-weight: 700;
+  font-size: clamp(25px, 3.4vw, 50px);
+  line-height: clamp(31px, 4.26vw, 62.75px);
+  text-align: center;
+}
+.testimon__info-text {
+  max-width: 764px;
+}
+@media (max-width: 1228px) {
+  .testimon__info-text {
+    text-align: center;
+  }
+}
+.testimon__info-text p {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(9px, 1.22vw, 18px);
+  line-height: clamp(13px, 1.73vw, 27px);
+  padding-bottom: 40px;
+}
+.testimon__info-text h3 {
+  color: rgb(255, 255, 255);
+  font-family: Livvic;
+  font-weight: 500;
+  font-size: clamp(10px, 1.36vw, 20px);
+  line-height: clamp(13px, 1.73vw, 27px);
+}
+.testimon__info-text h3 span {
+  color: rgb(172, 172, 172);
+}
+.testimon__info-img {
+  max-width: 350px;
+}
+.testimon__info-img img {
+  width: 100%;
+}
+.testimon__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(30px, 5.78vw, 85px);
+  padding-top: clamp(30px, 6.8vw, 100px);
+  flex-wrap: wrap;
+}
+
+.agriculture {
+  position: relative;
+}
+.agriculture__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+}
+.agriculture__bg::before {
+  content: "";
+  width: 9.06vw;
+  aspect-ratio: 1/1;
+  border-radius: 0 0 0 10px;
+  display: inline-block;
+  background-color: rgb(103, 133, 81);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+.agriculture__bg::after {
+  content: "";
+  position: absolute;
+  width: 4.16vw;
+  aspect-ratio: 1/1;
+  background-color: rgba(221, 221, 221, 0.15);
+  display: inline-block;
+  border-radius: 10px;
+  z-index: 11;
+  top: 6.66vw;
+  right: 6.66vw;
+}
+.agriculture-img {
+  width: 43.8vw;
+  height: 100%;
+  background-image: url(/images/image\ 20.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 1000px) {
+  .agriculture-img {
+    display: none;
+  }
+}
+.agriculture-content {
+  background-color: #6d8c54;
+  flex-grow: 1;
+  position: relative;
+}
+.agriculture-content img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-height: 48.6%;
+}
+.agriculture__container {
+  position: relative;
+  z-index: 100;
+  max-width: clamp(270px, 49.65vw, 730px);
+  padding: 80px 0;
+}
+.agriculture__container h2 {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(10px, 1.85vw, 20px);
+  line-height: clamp(15px, 2.78vw, 30px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.agriculture__container h3 {
+  font-family: "Livvic";
+  font-weight: 700;
+  font-size: clamp(25px, 4.63vw, 50px);
+  line-height: clamp(31px, 5.81vw, 62.75px);
+  margin-bottom: 67px;
+  text-align: center;
+}
+.agriculture__container ul li {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 1000px) {
+  .agriculture__container ul li {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.agriculture__container ul li img {
+  width: 90px;
+  height: 90px;
+  padding: 20px;
+  background-color: #344c31;
+  border-radius: 50%;
+}
+.agriculture__container ul li:not(:last-child) {
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+.agriculture__container ul li:not(:first-child) {
+  padding-top: 60px;
+}
+.agriculture__item h4 {
+  font-family: "Livvic";
+  font-weight: 600;
+  font-size: clamp(12px, 3.93vw, 24px);
+  margin-bottom: 7px;
+}
+.agriculture__item p {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(9px, 2.95vw, 18px);
+  line-height: clamp(13px, 4.42vw, 27px);
+}
+.agriculture__wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.blog {
+  position: relative;
+}
+.blog__box {
+  position: absolute;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.blog-top {
+  min-width: 100%;
+  height: 61%;
+  background-color: rgb(38, 60, 40);
+  background-image: url(/images/style3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.blog__posts {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+}
+.blog__posts h2 {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(10px, 1.36vw, 20px);
+  line-height: clamp(15px, 2.04vw, 30px);
+  text-align: center;
+}
+.blog__posts h1 {
+  font-family: "Livvic";
+  font-weight: 700;
+  font-size: clamp(25px, 3.4vw, 50px);
+  line-height: clamp(31px, 4.26vw, 62.75px);
+  text-align: center;
+}
+.blog__posts .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(15px, 2.04vw, 30px);
+  padding-top: clamp(50px, 6.8vw, 100px);
+  padding-bottom: clamp(50px, 6.8vw, 100px);
+}
+@media (max-width: 1480px) {
+  .blog__posts .wrapper {
+    flex-wrap: wrap;
+  }
+}
+.blog__posts .wrapper .wrap {
+  max-width: 460px;
+  max-height: 514px;
+  background-color: rgb(45, 68, 47);
+  border-radius: 10px;
+}
+.blog__posts .wrapper .wrap__img {
+  max-width: 460px;
+  position: relative;
+}
+.blog__posts .wrapper .wrap__img .date {
+  position: absolute;
+  max-width: 121px;
+  max-height: 33px;
+  background-color: rgb(247, 195, 95);
+  color: rgb(26, 26, 26);
+  border-top-left-radius: 10px;
+  right: 0;
+  bottom: 5px;
+}
+.blog__posts .wrapper .wrap__img .date p {
+  font-family: "Livvic";
+  font-weight: 500;
+  font-size: clamp(7px, 1.02vw, 15px);
+  line-height: clamp(9px, 1.28vw, 18.83px);
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.blog__posts .wrapper .wrap__img img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.blog__posts .wrapper .wrap__text .comments {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.36vw, 20px);
+}
+.blog__posts .wrapper .wrap__text .comments-info {
+  display: flex;
+  align-items: center;
+  margin-top: clamp(7px, 1.36vw, 20px);
+  padding-left: clamp(7px, 1.02vw, 15px);
+  gap: 7px;
+}
+.blog__posts .wrapper .wrap__text .comments-info .comments-info__img {
+  max-width: 20px;
+}
+.blog__posts .wrapper .wrap__text .comments-info .comments-info__img img {
+  width: 100%;
+}
+.blog__posts .wrapper .wrap__text .comments-info p {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(7px, 0.95vw, 14px);
+  line-height: clamp(8px, 1.16vw, 17.17px);
+}
+.blog__posts .wrapper .wrap__text .p {
+  font-family: "Livvic";
+  font-weight: 700;
+  font-size: clamp(7px, 1.63vw, 24px);
+  line-height: clamp(10px, 2.04vw, 30.12px);
+  padding-left: clamp(7px, 1.36vw, 20px);
+  padding-top: clamp(7px, 1.36vw, 20px);
+  padding-bottom: clamp(10px, 2.04vw, 30px);
+}
+
+.touch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1460px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+.touch .container {
+  max-width: 1470px;
+  margin: 0 auto;
+  display: flex;
+  gap: clamp(44px, 9.04vw, 133px);
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 690px) {
+  .touch .container {
+    flex-wrap: wrap;
+  }
+  .touch .container .touch-left {
+    text-align: center;
+  }
+}
+.touch-left {
+  max-width: 640px;
+}
+.touch-left__info {
+  padding-top: 10px;
+}
+.touch-left__info .frame {
+  padding-top: clamp(10px, 2.72vw, 40px);
+}
+.touch-left__info .frame span {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(7px, 0.95vw, 14px);
+  line-height: clamp(15px, 2.04vw, 30px);
+}
+.touch-left__info .frame a {
+  font-family: Livvic;
+  font-weight: 500;
+  font-size: clamp(10px, 1.36vw, 20px);
+  line-height: clamp(13px, 1.83vw, 27px);
+}
+.touch-left .heading h2 {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(10px, 1.36vw, 20px);
+  line-height: clamp(15px, 2.04vw, 30px);
+}
+.touch-left .heading h1 {
+  font-family: Livvic;
+  font-weight: 700;
+  font-size: clamp(25px, 3.4vw, 50px);
+  line-height: clamp(31px, 4.26vw, 62.75px);
+  padding-top: clamp(10px, 1.36vw, 20px);
+}
+.touch-left .heading p {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(9px, 2.95vw, 18px);
+  line-height: clamp(13px, 4.42vw, 27px);
+  padding-top: clamp(15px, 3.06vw, 45px);
+}
+.touch-right form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(10px, 2.04vw, 30px);
+  max-width: 660px;
+}
+.touch-right form button {
+  display: inline-block;
+  background-color: #f7c35f;
+  color: #1a1a1a;
+  border: none;
+  display: inline-block;
+  border-radius: 20px;
+  padding: clamp(10px, 1.7vw, 25px) clamp(15px, 1.7vw, 50%);
+}
+.touch-right form button:hover {
+  cursor: pointer;
+}
+.touch-right form input,
+.touch-right form textarea {
+  max-width: 600px;
+  width: 100%;
+  border-style: none;
+  border: none;
+  outline: none;
+  background-color: rgb(38, 60, 40);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Inter;
+  font-weight: 400;
+  font-size: clamp(13px, 1.08vw, 16px);
+  line-height: clamp(12px, 1.31vw, 19.36px);
+  padding: clamp(22px, 1.7vw, 25px) clamp(22px, 1.7vw, 25px);
+}
+@media (max-width: 440px) {
+  .touch-right form input,
+  .touch-right form textarea {
+    max-width: 200px;
+  }
+}
+
+.hr {
+  height: 2px;
+  width: 100%;
+}
+
+.figma .container .blocks {
+  border-top: 4px solid rgba(131, 131, 131, 0.1647058824);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(12px, 1.63vw, 24px);
+  flex-wrap: wrap;
+}
+
+.subfooter {
+  background: linear-gradient(142deg, rgba(248, 204, 119, 0.8) 0%, rgba(248, 205, 119, 0.384) 85%);
+  position: relative;
+}
+.subfooter::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  position: absolute;
+  background-image: url(/images/style5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.subfooter .crate {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 111px 0px 112px 0px;
+}
+@media (max-width: 588px) {
+  .subfooter .crate {
+    justify-content: center;
+    gap: 30px;
+  }
+}
+.subfooter .crate-2 {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3.4vw, 50px);
+}
+.subfooter .crate p {
+  color: #344c31;
+  font-weight: 400;
+  font-size: clamp(20px, 3.4vw, 50px);
+  font-family: "Johnstown";
+}
+.subfooter .crate button {
+  background-color: #f7c35f;
+  color: #1a1a1a;
+  border: none;
+  display: inline-block;
+  border-radius: 20px;
+  padding: clamp(10px, 1.7vw, 25px) clamp(15px, 1.7vw, 50%);
+}
+.subfooter .crate button:hover {
+  cursor: pointer;
+}
+.subfooter .crate-img {
+  max-width: 90px;
+  max-height: 90px;
+}
+.subfooter .crate-img img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color: #263c28;
+  padding-top: 90px;
+}
+footer .container .footer {
+  display: flex;
+  padding-bottom: 130px;
+  gap: 271px;
+}
+@media (max-width: 900px) {
+  footer .container .footer {
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+}
+footer .container .footer-left {
+  max-width: 630px;
+  max-height: 200px;
+}
+@media (max-width: 400px) {
+  footer .container .footer-left {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+footer .container .footer-left__img {
+  max-width: 200px;
+  max-height: 41px;
+}
+footer .container .footer-left__img img {
+  width: 100%;
+}
+footer .container .footer-left p {
+  padding-bottom: clamp(16px, 2.31vw, 34px);
+  font-family: "Century Gothic";
+  font-weight: normal;
+  font-size: clamp(12px, 1.08vw, 16px);
+  line-height: clamp(15px, 1.7vw, 25px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.212);
+}
+footer .container .footer-left__imgs {
+  display: flex;
+  gap: 30px;
+  padding-top: clamp(14px, 2.31vw, 34px);
+}
+footer .container .footer-right {
+  display: flex;
+  gap: clamp(20px, 6.8vw, 100px);
+}
+@media (max-width: 500px) {
+  footer .container .footer-right {
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+}
+footer .container .footer-right .links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .container .footer-right .links p {
+  font-family: "Livvic";
+  font-weight: 600;
+  font-size: clamp(12px, 1.49vw, 22px);
+  padding-bottom: 10px;
+}
+footer .container .footer-right .links a {
+  font-family: "Century Gothic";
+  font-weight: 400;
+  font-size: clamp(12px, 1.02vw, 15px);
+}
+footer .container .footer-right .news {
+  max-width: 315px;
+  max-height: 187px;
+}
+footer .container .footer-right .news span {
+  font-family: "Livvic";
+  font-weight: 600;
+  font-size: clamp(12px, 1.49vw, 22px);
+}
+footer .container .footer-right .news p {
+  font-family: "Century Gothic";
+  line-height: clamp(15px, 1.7vw, 25px);
+  padding-bottom: clamp(16px, 2.31vw, 34px);
+  padding-top: clamp(15px, 2.04vw, 30px);
+}
+footer .container .footer-right .news form {
+  padding: 5px 0px 5px 0px;
+  max-height: 55px;
+  max-width: 315px;
+  background-color: #334b35;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5px;
+  padding-left: 20px;
+  border-radius: 50px;
+  margin-top: clamp(12px, 1.63vw, 24px);
+}
+footer .container .footer-right .news form input {
+  border-style: none;
+  background-color: transparent;
+}
+footer .container .footer-right .news form input:focus,
+footer .container .footer-right .news form input :active {
+  border-style: none;
+  border: none;
+  outline: none;
+}
+footer .container .footer-right .news form button {
+  background-color: #f7c35f;
+  color: #1a1a1a;
+  border-radius: 50%;
+  border-style: none;
+  width: 45px;
+  height: 45px;
+}
+footer .sub-footer__bottom {
+  border-top: 2px solid rgba(255, 255, 255, 0.384);
+}
+footer .sub-footer__bottom .box-X {
+  display: flex;
+  gap: clamp(10px, 54.42vw, 800px);
+  padding: 50px 0px 50px 0px;
+  flex-wrap: wrap;
+}
+footer .sub-footer__bottom .box-X .p {
+  font-family: "Century Gothic";
+}
+footer .sub-footer__bottom .box-X .crate {
+  display: flex;
+  gap: 25px;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,998 @@
+main {
+  background-color: #334b35;
+  position: relative;
+}
+
+// introduction
+.intro {
+  display: flex;
+  gap: clamp(20px, 5.44vw, 80px);
+  padding-top: clamp(40px, 6.8vw, 100px);
+  align-items: start;
+  justify-content: center;
+  @media (max-width: 790px) {
+    flex-direction: column;
+  }
+  &-left {
+    max-width: clamp(270px, 38%, 564px);
+    width: 100%;
+    min-width: 270px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &::after {
+      content: "";
+      display: block;
+      width: 116%;
+      position: absolute;
+      aspect-ratio: 658/497;
+      background-color: #263c28;
+      top: min(-7.8vw, -120px);
+      right: 146px;
+      z-index: -1;
+    }
+
+    @media (max-width: 790px) {
+      max-width: 100%;
+    }
+    &-img {
+      width: 100%;
+      position: relative;
+      &::before {
+        content: "";
+        width: 20px;
+        height: 258px;
+        display: inline-block;
+        background-color: #f7c35f;
+        position: absolute;
+        left: -20px;
+        bottom: 21px;
+        border-radius: 5px 0 0 5px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &-content {
+      padding: clamp(10px, 2.17vw, 32px) clamp(15px, 2.38vw, 35px);
+      background-color: #6d8c54;
+      border-radius: 10px;
+      display: flex;
+      // position: absolute;
+      gap: 20px;
+      max-width: 428px;
+      width: 100%;
+      align-items: center;
+      // left: 50%;
+      // bottom: 59px;
+      // transform: translate(-50%, 50%);
+      margin-top: -82px;
+      z-index: 10;
+      position: relative;
+      &-text {
+        padding-left: clamp(10px, 2.17vw, 32px);
+        border-left: 1px solid #ffffff80;
+        .price {
+          font-family: "Mistral";
+          font-size: 40px;
+          & + p {
+            font-family: "Livvic";
+          }
+        }
+      }
+    }
+  }
+
+  &-right {
+    max-width: 884px;
+    width: 100%;
+    min-width: 590px;
+    @media (max-width: 790px) {
+      max-width: 100%;
+    }
+    @media (max-width: 1034px) {
+      min-width: 270px;
+    }
+    h2 {
+      font-family: "Century Gothic";
+      font-weight: 400;
+      font-size: clamp(10px, 1.36vw, 20px);
+      line-height: clamp(15px, 2.04vw, 30px);
+      margin: 20px 0;
+    }
+    h3 {
+      font-family: "Livvic";
+      font-weight: 700;
+      font-size: clamp(25px, 3.4vw, 50px);
+      line-height: clamp(31px, 4.26vw, 62.75px);
+      margin-top: clamp(10px, 1.36vw, 20px);
+    }
+    h4 {
+      font-family: "Livvic";
+      font-weight: 500;
+      font-size: clamp(15px, 2.04vw, 30px);
+      line-height: clamp(18.5px, 2.56vw, 37.65px);
+      color: #f7c35f;
+      margin-top: clamp(25px, 3.4vw, 50px);
+    }
+    p {
+      font-family: "Century Gothic";
+      font-weight: 400;
+      font-size: clamp(9px, 1.22vw, 18px);
+      line-height: clamp(13.5px, 1.83vw, 27px);
+      margin-top: clamp(10px, 1.36vw, 20px);
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-top: clamp(15px, 3.74vw, 55px);
+      li {
+        font-family: "Livvic";
+        font-weight: 500;
+        font-size: clamp(10px, 1.36vw, 20px);
+        line-height: clamp(13.5px, 1.83vw, 27px);
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        &::before {
+          content: "";
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          background-image: url(/images/Vector923.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+  }
+}
+// List
+.list {
+  font-family: "Livvic";
+
+  h3 {
+    font-family: "Century Gothic";
+    font-weight: 400;
+    font-size: clamp(10px, 1.36vw, 20px);
+    line-height: clamp(15px, 2.04vw, 30px);
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: clamp(25px, 3.4vw, 50px);
+    line-height: clamp(31.35px, 4.26vw, 62.75px);
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1450px;
+    gap: clamp(20px, 4.08vw, 60px);
+    margin-bottom: 188px;
+
+    @media (max-width: 1450px) {
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    width: 183px;
+    height: 177px;
+    background-color: #d9d9d91a;
+    border-radius: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover {
+      background-color: #f7c35f;
+      color: black;
+    }
+
+    .card-items {
+      width: 108px;
+      height: 105px;
+    }
+
+    img {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+//  Watch
+.watch {
+  background-image: url(/images/image7.png);
+  width: 100%;
+  height: calc(100vh - clamp(80px, 7.48vw, 110px));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 694px;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+
+      h1 {
+        text-align: center;
+        padding-bottom: 70px;
+      }
+    }
+
+    h1 {
+      font-family: Livvic;
+      margin-right: clamp(20px, 13.6vw, 200px);
+      font-weight: 700;
+      font-size: clamp(25px, 3.4vw, 50px);
+      line-height: clamp(31.25px, 4.26vw, 62.75px);
+
+      @media (max-width: 537px) {
+        text-align: center;
+        margin-right: 0px;
+      }
+    }
+
+    .button-border {
+      border: 1px solid #ffffff66;
+      position: relative;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        button {
+          width: 130px;
+          height: 130px;
+        }
+      }
+
+      button {
+        width: 80px;
+        transition: 1s;
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        height: 80px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    p {
+      min-width: clamp(90px, 11.56vw, 170px);
+      height: 49px;
+      font-family: "Johnstown";
+      font-weight: 400;
+      font-size: clamp(15px, 2.04vw, 30px);
+      line-height: clamp(20px, 3.23vw, 47.59px);
+      color: #f7c35f;
+      position: absolute;
+      left: 100px;
+      top: 100px;
+    }
+  }
+}
+
+// Work
+.work {
+  // height: calc(100vh - clamp(80px, 7.48vw, 110px));
+  background-image: url(/images/style.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 130px;
+
+  .container {
+    h2 {
+      font-family: "Century Gothic";
+      font-weight: 400;
+      font-size: clamp(10px, 1.36vw, 20px);
+      line-height: clamp(15px, 2.04vw, 30px);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: "Livvic";
+      font-weight: 700;
+      font-size: clamp(25px, 3.4vw, 50px);
+      line-height: clamp(31px, 4.26vw, 62.75px);
+      text-align: center;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: 57px;
+    max-width: 1400px;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    border-radius: 10px;
+    @media (max-width: 1500px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    max-width: 564px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    &:hover {
+      transform: translateY(-20px);
+      box-shadow: 0px 5px 25px 0px rgba(247, 195, 95, 0.1);
+      border: 1px solid rgba(247, 195, 95, 1);
+    }
+    transition: 1s;
+    &-text {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+      position: absolute;
+      z-index: 1;
+      bottom: -90px;
+      // bottom: 20px;
+      left: 0px;
+      padding: 20px;
+      transition: 1s;
+      // display: none;
+      background-color: #1a1a1a2c;
+
+      p {
+        font-family: Livvic;
+        font-weight: 600;
+        font-size: clamp(14px, 1.22vw, 18px);
+        line-height: clamp(11px, 1.53vw, 22.59px);
+
+        span {
+          font-family: "Century Gothic";
+          font-weight: 700;
+          font-size: clamp(14px, 0.81vw, 12px);
+          line-height: clamp(10px, 1vw, 14.71px);
+        }
+      }
+    }
+    &:hover {
+      .work__card-text {
+        // display: flex;
+        bottom: 0px;
+      }
+    }
+
+    &-img {
+      max-width: 318px;
+      img:first-child {
+        width: 100%;
+      }
+    }
+  }
+
+  p {
+    // position: absolute;
+    span {
+      color: #f7c35f;
+    }
+  }
+}
+
+// testimon
+.testimon {
+  padding-bottom: 200px;
+
+  .container {
+    h2 {
+      padding-top: 100px;
+      font-family: "Century Gothic";
+      font-weight: 400;
+      font-size: clamp(10px, 1.36vw, 20px);
+      line-height: clamp(15px, 2.04vw, 30px);
+      text-align: center;
+    }
+
+    h1 {
+      font-family: Livvic;
+      font-weight: 700;
+      font-size: clamp(25px, 3.4vw, 50px);
+      line-height: clamp(31px, 4.26vw, 62.75px);
+      text-align: center;
+    }
+  }
+
+  &__info-text {
+    max-width: 764px;
+
+    @media (max-width: 1228px) {
+      text-align: center;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      font-family: "Century Gothic";
+      font-weight: 400;
+      font-size: clamp(9px, 1.22vw, 18px);
+      line-height: clamp(13px, 1.73vw, 27px);
+      padding-bottom: 40px;
+    }
+
+    h3 {
+      color: rgba(255, 255, 255, 1);
+      font-family: Livvic;
+      font-weight: 500;
+      font-size: clamp(10px, 1.36vw, 20px);
+      line-height: clamp(13px, 1.73vw, 27px);
+
+      span {
+        color: rgba(172, 172, 172, 1);
+      }
+    }
+  }
+
+  &__info-img {
+    max-width: 350px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(30px, 5.78vw, 85px);
+    padding-top: clamp(30px, 6.8vw, 100px);
+    flex-wrap: wrap;
+  }
+}
+
+// Agriculture
+.agriculture {
+  position: relative;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    z-index: 1;
+    &::before {
+      content: "";
+      width: 9.06vw;
+      aspect-ratio: 1/1;
+      border-radius: 0 0 0 10px;
+      display: inline-block;
+      background-color: rgba(103, 133, 81, 1);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 4.16vw;
+      aspect-ratio: 1/1;
+      background-color: rgba(221, 221, 221, 0.15);
+      display: inline-block;
+      border-radius: 10px;
+      z-index: 11;
+      top: 6.66vw;
+      right: 6.66vw;
+    }
+  }
+  &-img {
+    width: 43.8vw;
+    height: 100%;
+    background-image: url(/images/image\ 20.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @media (max-width:1000px){
+      display: none;
+    }
+  }
+  &-content {
+    background-color: #6d8c54;
+    flex-grow: 1;
+    position: relative;
+    img {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-height: 48.6%;
+    }
+  }
+  &__container {
+    position: relative;
+    z-index: 100;
+    max-width: clamp(270px, 49.65vw, 730px);
+    padding: 80px 0;
+    h2 {
+      font-family: "Century Gothic";
+      font-weight: 400;
+      font-size: clamp(10px, 1.85vw, 20px);
+      line-height: clamp(15px, 2.78vw, 30px);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h3 {
+      font-family: "Livvic";
+      font-weight: 700;
+      font-size: clamp(25px, 4.63vw, 50px);
+      line-height: clamp(31px, 5.81vw, 62.75px);
+      margin-bottom: 67px;
+      text-align: center;
+    }
+    ul {
+      li {
+        display: flex;
+        gap: 30px;
+        @media (max-width:1000px){
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+        }
+        img {
+          width: 90px;
+          height: 90px;
+          padding: 20px;
+          background-color: #344c31;
+          border-radius: 50%;
+        }
+        &:not(:last-child) {
+          padding-bottom: 60px;
+          border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+        }
+        &:not(:first-child) {
+          padding-top: 60px;
+        }
+      }
+    }
+  }
+  &__item {
+    h4 {
+      font-family: "Livvic";
+      font-weight: 600;
+      font-size: clamp(12px, 3.93vw, 24px);
+      margin-bottom: 7px;
+    }
+    p {
+      font-family: "Century Gothic";
+      font-weight: 400;
+      font-size: clamp(9px, 2.95vw, 18px);
+      line-height: clamp(13px, 4.42vw, 27px);
+    }
+  }
+  &__wrap {
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width:1000px){
+      
+    }
+  }
+}
+
+// .agriculture {
+//   background-color: #6d8c54;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 100px;
+//   background-image: url(/images/style.png);
+//   background-repeat: no-repeat;
+//   background-position-x: right;
+//   background-position-y: bottom;
+//   position: relative;
+//   z-index: 0;
+
+//
+
+//   &__container {
+//     display: flex;
+//     gap: clamp(30px, 7.41vw, 109px);
+//     position: relative;
+//     z-index: 1;
+//     .img {
+//       width: 100px;
+//       height: 100px;
+//       z-index: 2;
+//       position: relative;
+//       left: 38%;
+//       top: 40px;
+//       @media (max-width: 1100px) {
+//         display: none;
+//       }
+//     }
+//   }
+
+//   &-left {
+//     flex-grow: 1;
+//     position: relative;
+
+//     @media (max-width: 1000px) {
+//       display: none;
+//     }
+
+//     .agriculture__img {
+//       position: absolute;
+//       right: 0%;
+//       object-position: center;
+//       height: 100%;
+
+//       img {
+//         object-fit: cover;
+//         width: auto;
+//         height: 100%;
+//       }
+//     }
+//   }
+
+//   &-right {
+//     max-width: clamp(550px, 49.65vw, 730px);
+//     width: 100%;
+
+//     @media (max-width: 1000px) {
+//       text-align: center;
+//     }
+//   }
+
+//   &__text {
+//     padding-top: clamp(20px, 5.44vw, 80px);
+
+//
+
+//     &-wrapper {
+//       max-width: 730px;
+//       max-height: 303px;
+
+//       hr {
+//         background-color: rgba(255, 255, 255, 0.2);
+//       }
+
+//       .wrap {
+//         max-width: 730px;
+//         max-height: 91px;
+//         margin-bottom: clamp(20px, 4.08vw, 60px);
+//         margin-top: clamp(20px, 4.08vw, 60px);
+//         display: flex;
+//         align-items: center;
+//         gap: 30px;
+//         @media (max-width: 1000px) {
+//           justify-content: center;
+//         }
+
+//
+//         }
+
+//         .wrap-img {
+//           max-width: 90px;
+//           max-height: 90px;
+//           img {
+//             width: 100%;
+//             height: 100%;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// Blog
+.blog {
+  position: relative;
+  &__box {
+    position: absolute;
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &-top {
+    min-width: 100%;
+    height: 61%;
+    background-color: rgba(38, 60, 40, 1);
+    background-image: url(/images/style3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+  }
+}
+.blog__posts {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+  h2 {
+    font-family: "Century Gothic";
+    font-weight: 400;
+    font-size: clamp(10px, 1.36vw, 20px);
+    line-height: clamp(15px, 2.04vw, 30px);
+    text-align: center;
+  }
+  h1 {
+    font-family: "Livvic";
+    font-weight: 700;
+    font-size: clamp(25px, 3.4vw, 50px);
+    line-height: clamp(31px, 4.26vw, 62.75px);
+    text-align: center;
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(15px, 2.04vw, 30px);
+    padding-top: clamp(50px, 6.8vw, 100px);
+    padding-bottom: clamp(50px, 6.8vw, 100px);
+    @media (max-width: 1480px) {
+      flex-wrap: wrap;
+    }
+    .wrap {
+      max-width: 460px;
+      max-height: 514px;
+      background-color: rgba(45, 68, 47, 1);
+      border-radius: 10px;
+      &__img {
+        max-width: 460px;
+        position: relative;
+        .date {
+          position: absolute;
+          max-width: 121px;
+          max-height: 33px;
+          background-color: rgba(247, 195, 95, 1);
+          color: rgba(26, 26, 26, 1);
+          border-top-left-radius: 10px;
+          right: 0;
+          bottom: 5px;
+          p {
+            font-family: "Livvic";
+            font-weight: 500;
+            font-size: clamp(7px, 1.02vw, 15px);
+            line-height: clamp(9px, 1.28vw, 18.83px);
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+        }
+        img {
+          width: 100%;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+      }
+      &__text {
+        .comments {
+          display: flex;
+          align-items: center;
+          gap: clamp(10px, 1.36vw, 20px);
+          &-info {
+            display: flex;
+            align-items: center;
+            margin-top: clamp(7px, 1.36vw, 20px);
+            padding-left: clamp(7px, 1.02vw, 15px);
+            gap: 7px;
+            .comments-info__img {
+              max-width: 20px;
+              img {
+                width: 100%;
+              }
+            }
+
+            p {
+              font-family: "Century Gothic";
+              font-weight: 400;
+              font-size: clamp(7px, 0.95vw, 14px);
+              line-height: clamp(8px, 1.16vw, 17.17px);
+            }
+          }
+        }
+        .p {
+          font-family: "Livvic";
+          font-weight: 700;
+          font-size: clamp(7px, 1.63vw, 24px);
+          line-height: clamp(10px, 2.04vw, 30.12px);
+          padding-left: clamp(7px, 1.36vw, 20px);
+          padding-top: clamp(7px, 1.36vw, 20px);
+          padding-bottom: clamp(10px, 2.04vw, 30px);
+        }
+      }
+    }
+  }
+}
+// Touch
+.touch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1460px;
+  margin: 0 auto;
+  padding-bottom: 100px;
+  .container {
+    max-width: 1470px;
+    margin: 0 auto;
+    display: flex;
+    gap: clamp(44px, 9.04vw, 133px);
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 690px) {
+      flex-wrap: wrap;
+      .touch-left {
+        text-align: center;
+      }
+    }
+  }
+  &-left {
+    max-width: 640px;
+    &__info {
+      padding-top: 10px;
+      .frame {
+        padding-top: clamp(10px, 2.72vw, 40px);
+        span {
+          font-family: "Century Gothic";
+          font-weight: 400;
+          font-size: clamp(7px, 0.95vw, 14px);
+          line-height: clamp(15px, 2.04vw, 30px);
+        }
+        a {
+          font-family: Livvic;
+          font-weight: 500;
+          font-size: clamp(10px, 1.36vw, 20px);
+          line-height: clamp(13px, 1.83vw, 27px);
+        }
+      }
+    }
+    .heading {
+      h2 {
+        font-family: "Century Gothic";
+        font-weight: 400;
+        font-size: clamp(10px, 1.36vw, 20px);
+        line-height: clamp(15px, 2.04vw, 30px);
+      }
+      h1 {
+        font-family: Livvic;
+        font-weight: 700;
+        font-size: clamp(25px, 3.4vw, 50px);
+        line-height: clamp(31px, 4.26vw, 62.75px);
+        padding-top: clamp(10px, 1.36vw, 20px);
+      }
+      p {
+        font-family: "Century Gothic";
+        font-weight: 400;
+        font-size: clamp(9px, 2.95vw, 18px);
+        line-height: clamp(13px, 4.42vw, 27px);
+        padding-top: clamp(15px, 3.06vw, 45px);
+      }
+    }
+  }
+  &-right {
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: clamp(10px, 2.04vw, 30px);
+      max-width: 660px;
+      button {
+        display: inline-block;
+        @include button-style(#f7c35f, #1a1a1a);
+      }
+      input,
+      textarea {
+        max-width: 600px;
+        width: 100%;
+        border-style: none;
+        border: none;
+        outline: none;
+        background-color: rgba(38, 60, 40, 1);
+        border-radius: 10px;
+        color: rgba(255, 255, 255, 0.8);
+        font-family: Inter;
+        font-weight: 400;
+        font-size: clamp(13px, 1.08vw, 16px);
+        line-height: clamp(12px, 1.31vw, 19.36px);
+        padding: clamp(22px, 1.7vw, 25px) clamp(22px, 1.7vw, 25px);
+        @media (max-width: 440px) {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+}
+.hr {
+  height: 2px;
+  width: 100%;
+}
+// Figma
+.figma {
+  .container {
+    .blocks {
+      border-top: 4px solid #8383832a;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(12px, 1.63vw, 24px);
+      flex-wrap: wrap;
+    }
+  }
+}
+// subfooter
+.subfooter {
+  background: linear-gradient(
+    142deg,
+    rgba(248, 204, 119, 0.8) 0%,
+    rgba(248, 205, 119, 0.384) 85%
+  );
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    position: absolute;
+    background-image: url(/images/style5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .crate {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 111px 0px 112px 0px;
+    @media (max-width: 588px) {
+      justify-content: center;
+      gap: 30px;
+    }
+    &-2 {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 3.4vw, 50px);
+    }
+    p {
+      color: #344c31;
+      font-weight: 400;
+      font-size: clamp(20px, 3.4vw, 50px);
+      font-family: "Johnstown";
+    }
+    button {
+      @include button-style(#f7c35f, #1a1a1a);
+    }
+    &-img {
+      max-width: 90px;
+      max-height: 90px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
