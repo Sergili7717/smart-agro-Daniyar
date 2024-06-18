@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   // height: calc(100vh - clamp(80px, 7.48vw, 110px));
-  background-image: url(/images/image.jpg);
+  background-image: url("../../images/image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -26,7 +26,7 @@
       max-width: 215px;
       &::after {
         content: "";
-        background-image: url("/images/Vector.svg");
+        background-image: url("../../images/Vector.svg");
         display: inline-block;
         height: 11px;
         width: clamp(114px,29.44vw,214.97px);

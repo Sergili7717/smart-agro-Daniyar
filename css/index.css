@@ -136,7 +136,7 @@ header h1 {
 
 .hero {
   width: 100%;
-  background-image: url(/images/image.jpg);
+  background-image: url("../../images/image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -162,7 +162,7 @@ header h1 {
 }
 .hero__text h3::after {
   content: "";
-  background-image: url("/images/Vector.svg");
+  background-image: url("../../images/Vector.svg");
   display: inline-block;
   height: 11px;
   width: clamp(114px, 29.44vw, 214.97px);
