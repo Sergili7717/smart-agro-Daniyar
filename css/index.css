@@ -136,7 +136,7 @@ header h1 {
 
 .hero {
   width: 100%;
-  background-image: url("../../images/image.jpg");
+  background-image: url("../images/image.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -162,7 +162,7 @@ header h1 {
 }
 .hero__text h3::after {
   content: "";
-  background-image: url("../../images/Vector.svg");
+  background-image: url("../images/Vector.svg");
   display: inline-block;
   height: 11px;
   width: clamp(114px, 29.44vw, 214.97px);
@@ -183,7 +183,7 @@ header h1 {
   width: 11.8%;
   display: inline-block;
   aspect-ratio: 75/62;
-  background-image: url("/images/image5.png");
+  background-image: url("../images/image5.png");
   background-size: 100%;
   background-repeat: no-repeat;
   position: absolute;
@@ -367,7 +367,7 @@ main {
   width: 20px;
   height: 20px;
   display: inline-block;
-  background-image: url(/images/Vector923.svg);
+  background-image: url(../images/Vector923.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -426,7 +426,7 @@ main {
 }
 
 .watch {
-  background-image: url(/images/image7.png);
+  background-image: url(../images/image7.png);
   width: 100%;
   height: calc(100vh - clamp(80px, 7.48vw, 110px));
   background-repeat: no-repeat;
@@ -499,7 +499,7 @@ main {
 }
 
 .work {
-  background-image: url(/images/style.svg);
+  background-image: url(../images/style.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -681,7 +681,7 @@ main {
 .agriculture-img {
   width: 43.8vw;
   height: 100%;
-  background-image: url(/images/image\ 20.png);
+  background-image: url(../images/image\ 20.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -766,6 +766,12 @@ main {
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 1000px) {
+  .agriculture__wrap {
+    justify-content: center;
+  }
+}
+
 .blog {
   position: relative;
 }
@@ -780,7 +786,7 @@ main {
   min-width: 100%;
   height: 61%;
   background-color: rgb(38, 60, 40);
-  background-image: url(/images/style3.png);
+  background-image: url(../images/style3.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1023,7 +1029,7 @@ main {
   left: 0;
   z-index: 0;
   position: absolute;
-  background-image: url(/images/style5.png);
+  background-image: url(../images/style5.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

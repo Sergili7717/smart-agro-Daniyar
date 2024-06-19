@@ -143,7 +143,7 @@ main {
           width: 20px;
           height: 20px;
           display: inline-block;
-          background-image: url(/images/Vector923.svg);
+          background-image: url(../images/Vector923.svg);
           background-size: contain;
           background-repeat: no-repeat;
         }
@@ -213,7 +213,7 @@ main {
 
 //  Watch
 .watch {
-  background-image: url(/images/image7.png);
+  background-image: url(../images/image7.png);
   width: 100%;
   height: calc(100vh - clamp(80px, 7.48vw, 110px));
   background-repeat: no-repeat;
@@ -295,7 +295,7 @@ main {
 // Work
 .work {
   // height: calc(100vh - clamp(80px, 7.48vw, 110px));
-  background-image: url(/images/style.svg);
+  background-image: url(../images/style.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -505,7 +505,7 @@ main {
   &-img {
     width: 43.8vw;
     height: 100%;
-    background-image: url(/images/image\ 20.png);
+    background-image: url(../images/image\ 20.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -591,7 +591,7 @@ main {
     display: flex;
     justify-content: flex-end;
     @media (max-width:1000px){
-      
+      justify-content: center;
     }
   }
 }
@@ -714,7 +714,7 @@ main {
     min-width: 100%;
     height: 61%;
     background-color: rgba(38, 60, 40, 1);
-    background-image: url(/images/style3.png);
+    background-image: url(../images/style3.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -955,7 +955,7 @@ main {
     left: 0;
     z-index: 0;
     position: absolute;
-    background-image: url(/images/style5.png);
+    background-image: url(../images/style5.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

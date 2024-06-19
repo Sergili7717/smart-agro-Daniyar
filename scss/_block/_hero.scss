@@ -1,7 +1,7 @@
 .hero {
   width: 100%;
   // height: calc(100vh - clamp(80px, 7.48vw, 110px));
-  background-image: url("../../images/image.jpg");
+  background-image: url('../images/image.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -9,16 +9,16 @@
   z-index: 2;
   &__text {
     max-width: 730px;
-    padding-top: clamp(40px,12.24vw,180px);
+    padding-top: clamp(40px, 12.24vw, 180px);
     font-family: "livvic";
-    padding-bottom: clamp(20px,6.80vw,100px);
-    @media (max-width:1500px){
+    padding-bottom: clamp(20px, 6.8vw, 100px);
+    @media (max-width: 1500px) {
     }
     h3 {
       font-family: "Century Gothic";
       font-weight: 700;
-      font-size: clamp(12px,3.42vw,25px);
-      line-height: clamp(10px,2.04vw,30px);
+      font-size: clamp(12px, 3.42vw, 25px);
+      line-height: clamp(10px, 2.04vw, 30px);
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -26,17 +26,17 @@
       max-width: 215px;
       &::after {
         content: "";
-        background-image: url("../../images/Vector.svg");
+        background-image: url("../images/Vector.svg");
         display: inline-block;
         height: 11px;
-        width: clamp(114px,29.44vw,214.97px);
+        width: clamp(114px, 29.44vw, 214.97px);
       }
     }
     h1 {
       font-family: Livvic;
       font-weight: 700;
-      font-size: clamp(20px,9.58vw,70px);
-      line-height: clamp(47px,12.03vw,87.85px);
+      font-size: clamp(20px, 9.58vw, 70px);
+      line-height: clamp(47px, 12.03vw, 87.85px);
       span {
         color: #f7c35f;
         position: relative;
@@ -46,7 +46,7 @@
           width: 11.8%;
           display: inline-block;
           aspect-ratio: 75/62;
-          background-image: url("/images/image5.png");
+          background-image: url("../images/image5.png");
           background-size: 100%;
           background-repeat: no-repeat;
           position: absolute;
@@ -58,14 +58,14 @@
     p {
       font-family: "Century Gothic";
       font-weight: 400;
-      font-size: clamp(10px,2.73vw,20px);
-      line-height: clamp(12px,3.35vw,24.52px);
+      font-size: clamp(10px, 2.73vw, 20px);
+      line-height: clamp(12px, 3.35vw, 24.52px);
       margin-top: 10px;
     }
     .button {
       font-family: "Livvic";
       font-weight: 500;
-      font-size: clamp(10px,2.05vw,15px);
+      font-size: clamp(10px, 2.05vw, 15px);
       line-height: 18.83px;
       margin-top: 30px;
     }
@@ -77,7 +77,7 @@
   border: none;
   display: inline-block;
   border-radius: 20px;
-  padding: clamp(10px,1.7vw,25px) clamp(15px,1.7vw,50%);
+  padding: clamp(10px, 1.7vw, 25px) clamp(15px, 1.7vw, 50%);
   &:hover {
     cursor: pointer;
   }
