@@ -450,7 +450,7 @@ main {
     display: flex;
     min-width: 16.66%;
     gap: clamp(20px, 5.86vw, 85px);
-    padding: 0 120px;
+    padding: 0 clamp(20px,8.27vw,120px);
     align-items: center;
     @media (max-width: 1000px) {
       flex-direction: column;
